@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wybierz swój samochód marki rem</title>
+    <link rel="stylesheet" href="rem.css">
+    <script>
+        function Start() {
+            RemM = 200000
+            document.getElementById("Ram").innerHTML = "Cena twojego samochodu: " + RemM + "zł";
+
+        }
+
+        function SubaruR() {
+            let Cena = RemM;
+            let n1 = document.getElementById("Zeroone").checked;
+            let n2 = document.getElementById("Zerosixteen").checked;
+            let n3 = document.getElementById("Zerofifteen").checked;
+            if (n2) {
+                Cena = Cena * 1.3;
+            }
+            if (n3) {
+                Cena = Cena * 1.1;
+
+            }
+            let Rom = document.getElementById("emilia").value;
+            if (Rom == "d") {
+                Cena = Cena + 3500;
+            }
+            if (Rom == "e") {
+                Cena = Cena + 25000;
+            }
+            if (Rom == "h") {
+                Cena = Cena + 35000;
+            }
+            let kl = document.getElementById("kl").checked;
+            let ts = document.getElementById("ts").checked;
+            let te = document.getElementById("te").checked;
+            let cp = document.getElementById("cp").checked;
+            let sl = document.getElementById("sl").checked;
+            let ll = document.getElementById("ll").checked;
+            let ab = document.getElementById("ab").checked;
+            let ew = document.getElementById("ew").checked;
+            if (kl) {
+                Cena = Cena + 2000;
+            }
+            if (ts) {
+                Cena = Cena + 3000;
+            }
+            if (te) {
+                Cena = Cena + 1000;
+            }
+            if (cp) {
+                Cena = Cena + 5000;
+            }
+            if (sl) {
+                Cena = Cena + 250;
+            }
+            if (ll) {
+                Cena = Cena + 1000;
+            }
+            if (ab) {
+                Cena = Cena + 2500;
+            }
+            if (ew) {
+                Cena = Cena + 200;
+            }
+
+
+
+
+
+            Cena = Math.round(Cena);
+            document.getElementById("Ram").innerHTML = "Cena twojego samochodu: " + Cena + "zł";
+        }
+    </script>
+</head>
+
+<body onload="Start()">
+    <header>
+        <h1>Wybierz tuning swojego samochodu</h1>
+    </header>
+    <main>
+        <div id="Ram">10000</div>
+        <form action="mailto:kubajozefkowcz@wp.pl" enctype="text/plain" method="POST">
+            <div class="zerotwo">
+                <fieldset>
+                    <legend>Rodzaj nadwozia</legend>
+                    <input type="radio" name="subaru" id="Zeroone" vaule="1" onchange="SubaruR() ">Hatchback
+                    <input type="radio" name="subaru" id="Zerosixteen" vaule="2" onchange="SubaruR() ">Kabriolet
+                    <input type="radio" name="subaru" id="Zerofifteen" vaule="3" onchange="SubaruR() ">Sedan
+                </fieldset>
+            </div>
+            <div class=zerotwo>
+                <label for="emilia">Rodzaj silnika</label>
+                <select name="emilia" id="emilia" onchange=" SubaruR() ">
+                    <option value="d">diesiel</option>
+                    <option value="b">benzyna</option>
+                    <option value="e">elektryczny</option>
+                    <option value="h">hybryda</option>
+                </select>
+            </div>
+            <div class=zerotwo>
+                <input type="checkbox" name="kl" id="kl" onchange="SubaruR() ">Klimatyzacja
+                <input type="checkbox" name="ts" id="ts" onchange="SubaruR() ">Tapicerka skórzana
+                <input type="checkbox" name="te" id="te" onchange="SubaruR() ">Tempomat
+                <input type="checkbox" name="cp" id="cp" onchange="SubaruR() ">Czujniki parkowania
+                <br>
+                <input type="checkbox" name="sl" id="sl" onchange="SubaruR() ">Składane lusterka
+                <input type="checkbox" name="ll" id="ll" onchange="SubaruR() ">Lampy ledowe
+                <input type="checkbox" name="ab" id="ab" onchange="SubaruR() ">ABS
+                <input type="checkbox" name="ew" id="ew" onchange="SubaruR() ">Ogrzewane fotele
+            </div>
+
+            </div>
+            <div class="zerotwo">
+                <input type="text">Podaj imię i nazwisko <br>
+                <input type="email">Podaj adres e-mail<br>
+                <input type="tel">Podaj numer telefonu
+            </div>
+            <div>
+                <label for="">Kolor lakieru</label>
+                <input type="color">
+            </div>
+            <div class="zerotwo">
+                Uwagi <br>
+                <textarea cols="40" rows="2"></textarea>
+            </div>
+            <div class="zerotwo">
+                <input type="submit" value="Zamów">
+                <input type="reset" value="Wyczyść">
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

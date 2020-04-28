@@ -1,0 +1,29 @@
+body {
+    background-image: url(Samoch0d\ rem.jpg);
+    background-size: cover;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+main {
+    background-color: #87cfebc2;
+    width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: #ffb6c1;
+}
+
+.zerotwo {
+    margin: 20px;
+    padding: 10px;
+}
+
+#Ram {
+    font-size: 27px;
+    font-weight: bolder;
+    color: skyblue;
+
+}
